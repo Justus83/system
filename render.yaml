@@ -1,0 +1,4 @@
+frontend:
+  path: frontend
+backend:
+  path: backend
