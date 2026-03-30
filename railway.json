@@ -1,0 +1,13 @@
+{
+  "frontend": {
+    "type": "react",
+    "build": "vite",
+    "command": "npm run build",
+    "directory": "dist"
+  },
+  "backend": {
+    "type": "springboot",
+    "command": "./mvnw clean install",
+    "directory": "target"
+  }
+}
