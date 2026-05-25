@@ -1,0 +1,813 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Legal Case Management System - Complete Presentation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            padding: 20px;
+        }
+        
+        .container {
+            max-width: 900px;
+            margin: 0 auto;
+            background: white;
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+        }
+        
+        h1 {
+            color: #667eea;
+            text-align: center;
+            margin-bottom: 10px;
+            font-size: 2.5em;
+            border-bottom: 3px solid #667eea;
+            padding-bottom: 20px;
+        }
+        
+        h2 {
+            color: #764ba2;
+            margin-top: 40px;
+            margin-bottom: 20px;
+            font-size: 1.8em;
+            border-left: 5px solid #667eea;
+            padding-left: 15px;
+        }
+        
+        h3 {
+            color: #667eea;
+            margin-top: 25px;
+            margin-bottom: 15px;
+            font-size: 1.3em;
+        }
+        
+        .subtitle {
+            text-align: center;
+            color: #666;
+            font-size: 1.1em;
+            margin-bottom: 30px;
+        }
+        
+        .section {
+            margin-bottom: 40px;
+            page-break-inside: avoid;
+        }
+        
+        .step {
+            background: #f8f9fa;
+            border-left: 4px solid #667eea;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .step strong {
+            color: #667eea;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+        }
+        
+        th {
+            background: #667eea;
+            color: white;
+            padding: 12px;
+            text-align: left;
+        }
+        
+        td {
+            border: 1px solid #ddd;
+            padding: 10px;
+        }
+        
+        tr:nth-child(even) {
+            background: #f8f9fa;
+        }
+        
+        .flow-diagram {
+            background: #f0f4ff;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            padding: 20px;
+            margin: 20px 0;
+            font-family: monospace;
+            overflow-x: auto;
+            white-space: pre-wrap;
+        }
+        
+        .dashboard {
+            background: #fff;
+            border: 2px solid #667eea;
+            border-radius: 8px;
+            padding: 15px;
+            margin: 15px 0;
+            font-family: monospace;
+        }
+        
+        .feature-list {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .feature-item {
+            background: #f0f4ff;
+            padding: 12px;
+            border-radius: 5px;
+            border-left: 3px solid #667eea;
+        }
+        
+        .example {
+            background: #fff3cd;
+            border-left: 4px solid #ffc107;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .qa {
+            background: #e8f4f8;
+            border-left: 4px solid #17a2b8;
+            padding: 15px;
+            margin: 15px 0;
+            border-radius: 5px;
+        }
+        
+        .qa strong {
+            color: #17a2b8;
+        }
+        
+        .benefits {
+            display: grid;
+            grid-template-columns: 1fr 1fr 1fr;
+            gap: 15px;
+            margin: 20px 0;
+        }
+        
+        .benefit-box {
+            background: #e8f5e9;
+            border: 2px solid #4caf50;
+            border-radius: 8px;
+            padding: 15px;
+            text-align: center;
+        }
+        
+        .benefit-box h4 {
+            color: #2e7d32;
+            margin-bottom: 10px;
+        }
+        
+        .benefit-box ul {
+            list-style: none;
+            text-align: left;
+        }
+        
+        .benefit-box li {
+            color: #555;
+            margin: 5px 0;
+            padding-left: 20px;
+            position: relative;
+        }
+        
+        .benefit-box li:before {
+            content: "✓";
+            color: #4caf50;
+            font-weight: bold;
+            position: absolute;
+            left: 0;
+        }
+        
+        footer {
+            text-align: center;
+            margin-top: 50px;
+            padding-top: 20px;
+            border-top: 2px solid #667eea;
+            color: #666;
+        }
+        
+        .page-break {
+            page-break-after: always;
+        }
+        
+        @media print {
+            body {
+                background: white;
+            }
+            .container {
+                box-shadow: none;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>⚖️ LEGAL CASE MANAGEMENT SYSTEM</h1>
+        <p class="subtitle">Complete Presentation - How It Works</p>
+        
+        <!-- SECTION 1 -->
+        <div class="section">
+            <h2>🎯 What Is This System?</h2>
+            <p>A <strong>web-based platform</strong> that connects lawyers and clients online:</p>
+            
+            <div class="feature-list">
+                <div class="feature-item">
+                    <strong>👨‍⚖️ For Lawyers:</strong><br>
+                    Register, accept cases, manage clients, get paid online
+                </div>
+                <div class="feature-item">
+                    <strong>👤 For Clients:</strong><br>
+                    Find lawyers, request cases, make payments, communicate
+                </div>
+                <div class="feature-item">
+                    <strong>🔒 For Security:</strong><br>
+                    Admin approval, encrypted payments, data protection
+                </div>
+                <div class="feature-item">
+                    <strong>📱 For Access:</strong><br>
+                    Works on desktop, mobile, tablet - any browser
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-break"></div>
+        
+        <!-- SECTION 2 -->
+        <div class="section">
+            <h2>📌 Step-by-Step Workflow</h2>
+            
+            <h3>STEP 1: Registration & Login</h3>
+            
+            <h4 style="color: #764ba2; margin-top: 15px;">Lawyer Registration Process:</h4>
+            <div class="step">
+                <strong>1.</strong> Click "Register as Lawyer"<br>
+                <strong>2.</strong> Enter: Name, Email, Password<br>
+                <strong>3.</strong> Select: Legal Specialization (Family Law, Criminal, Corporate, etc.)<br>
+                <strong>4.</strong> Enter: Office Name, Address, Phone, Aadhar ID<br>
+                <strong>5.</strong> Upload: Professional Photo<br>
+                <strong>6.</strong> WAIT for Admin Approval ⏳<br>
+                <strong>7.</strong> Once Approved → Can Login & Accept Cases ✅
+            </div>
+            
+            <h4 style="color: #764ba2; margin-top: 15px;">Client Registration Process:</h4>
+            <div class="step">
+                <strong>1.</strong> Click "Register as Client"<br>
+                <strong>2.</strong> Enter: Name, Email, Password<br>
+                <strong>3.</strong> Enter: Full Address, Phone, Aadhar ID<br>
+                <strong>4.</strong> Upload: Photo<br>
+                <strong>5.</strong> INSTANT APPROVAL ✅<br>
+                <strong>6.</strong> Can Login Immediately & Request Cases
+            </div>
+        </div>
+        
+        <!-- SECTION 3 -->
+        <div class="section">
+            <h2>📋 Step 2: Client Submits a Case</h2>
+            
+            <div class="step">
+                <strong>Location:</strong> Client Dashboard<br>
+                <strong>Action:</strong> Click "Request Case Help"<br>
+                <strong>Fill In:</strong><br>
+                • Case Type (Family Law, Criminal, etc.)<br>
+                • Description of Problem<br>
+                • Select Desired Lawyer from List<br>
+                <strong>Status:</strong> 🔴 PENDING (Waiting for Lawyer to Review)
+            </div>
+        </div>
+        
+        <!-- SECTION 4 -->
+        <div class="section">
+            <h2>✅ Step 3: Lawyer Reviews & Approves Case</h2>
+            
+            <div class="step">
+                <strong>Location:</strong> Lawyer Dashboard<br>
+                <strong>Notification:</strong> Lawyer receives alert about new case<br>
+                <strong>Review:</strong> Click case to view full details<br>
+                <strong>Decision:</strong> Two Options<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;✅ APPROVE Case<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;❌ REJECT Case<br>
+                <strong>Result:</strong><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;If APPROVED → Status Changes to 🟠 APPROVED<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;If REJECTED → Status Changes to 🔴 REJECTED
+            </div>
+        </div>
+        
+        <div class="page-break"></div>
+        
+        <!-- SECTION 5 -->
+        <div class="section">
+            <h2>💰 Step 4: Client Confirms & Makes Payment</h2>
+            
+            <div class="step">
+                <strong>Notification:</strong> Client gets alert that lawyer approved case ✅<br>
+                <strong>View:</strong> Case Status changes to APPROVED<br>
+                <strong>Invoice:</strong> Amount Due is displayed (e.g., $500)<br>
+                <strong>Action:</strong> Click "Pay Now" Button<br>
+                <strong>Payment:</strong> Enter Card Details & Confirm<br>
+                <strong>Result:</strong> Status Changes to 🟢 PAID<br>
+                <strong>Next:</strong> CASE BECOMES ACTIVE 🎯
+            </div>
+        </div>
+        
+        <!-- SECTION 6 -->
+        <div class="section">
+            <h2>💬 Step 5: Lawyer & Client Communicate</h2>
+            
+            <h4 style="color: #764ba2;">How Client Sends Messages:</h4>
+            <div class="step">
+                • Go to "My Cases" in Client Dashboard<br>
+                • Select the Active Case<br>
+                • Click "Send Message to Lawyer"<br>
+                • Type Your Message<br>
+                • Click SEND ✉️<br>
+                • Message appears in Chat History
+            </div>
+            
+            <h4 style="color: #764ba2; margin-top: 15px;">How Lawyer Replies:</h4>
+            <div class="step">
+                • Go to "Case Messages" in Lawyer Dashboard<br>
+                • See Client's Message<br>
+                • Click "Reply"<br>
+                • Type Response<br>
+                • Click SEND<br>
+                • Client Gets Notification & Sees Reply
+            </div>
+        </div>
+        
+        <!-- SECTION 7 -->
+        <div class="section">
+            <h2>📊 Step 6: Track Invoices & Payments</h2>
+            
+            <h4 style="color: #764ba2;">What Lawyer Sees:</h4>
+            <div class="step">
+                • Go to "Finance" Section in Dashboard<br>
+                • View All Cases with:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;→ Case Name<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;→ Amount Charged<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;→ Payment Status (Paid/Unpaid)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;→ Payment Date<br>
+                • Download Invoice PDFs<br>
+                • Generate Income Reports
+            </div>
+            
+            <h4 style="color: #764ba2; margin-top: 15px;">What Client Sees:</h4>
+            <div class="step">
+                • Go to "My Invoices" Section<br>
+                • View All Invoices:<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;→ Case Name<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;→ Amount Due<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;→ Payment Status (Paid/Unpaid)<br>
+                &nbsp;&nbsp;&nbsp;&nbsp;→ Due Date<br>
+                • Click "Pay Now" for Unpaid Invoices<br>
+                • Download Invoice PDFs for Records
+            </div>
+        </div>
+        
+        <div class="page-break"></div>
+        
+        <!-- SECTION 8 -->
+        <div class="section">
+            <h2>🔄 Complete Case Flow Diagram</h2>
+            
+            <div class="flow-diagram">CLIENT REGISTERS & LOGS IN
+    ↓
+CLIENT SUBMITS CASE
+(Selects Lawyer, Describes Problem)
+Status: 🔴 PENDING
+    ↓
+LAWYER GETS NOTIFICATION
+(Reviews Case Details)
+    ↓
+    ├─→ APPROVE ✅
+    │   Status: 🟠 APPROVED
+    │   
+    └─→ REJECT ❌
+        Status: 🔴 REJECTED
+        (Case Ends Here)
+    ↓
+CLIENT CONFIRMS & PAYS
+(Makes Online Payment)
+Status: 🟢 PAID
+    ↓
+CASE BECOMES ACTIVE 🎯
+(Lawyer & Client Can Now Work)
+    ↓
+COMMUNICATION BEGINS
+(Exchange Messages & Documents)
+    ↓
+CASE PROGRESS
+(Track Updates & Status)
+    ↓
+CASE COMPLETED
+(Status: CLOSED)
+    ↓
+FINAL INVOICE GENERATED
+(Both Can Download Receipt)
+            </div>
+        </div>
+        
+        <!-- SECTION 9 -->
+        <div class="section">
+            <h2>🖥️ What Each User Sees</h2>
+            
+            <h4 style="color: #764ba2;">LAWYER DASHBOARD:</h4>
+            <div class="dashboard">
+Welcome, John Smith (Lawyer)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 PENDING CASES:           3
+✅ APPROVED CASES:          5
+💰 PENDING PAYMENTS:    $2,000
+💵 COMPLETED PAYMENTS:  $10,000
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[View Cases] [Messages] [Finance]
+[Profile] [Logout]
+            </div>
+            
+            <h4 style="color: #764ba2; margin-top: 15px;">CLIENT DASHBOARD:</h4>
+            <div class="dashboard">
+Welcome, Sarah Jones (Client)
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+📋 MY CASES:                2
+⏳ PENDING APPROVAL:        1
+💰 UNPAID INVOICES:     $1,500
+✅ PAID INVOICES:       $3,500
+━━━━━━━━━━━━━━━━━━━━━━━━━━━━
+[View Cases] [New Case] [Messages]
+[Invoices] [Profile] [Logout]
+            </div>
+        </div>
+        
+        <div class="page-break"></div>
+        
+        <!-- SECTION 10 -->
+        <div class="section">
+            <h2>💡 Real World Example</h2>
+            
+            <h3>Family Law Case - From Start to Active</h3>
+            
+            <div class="example">
+                <strong>MONDAY - Client Registers</strong><br>
+                ➜ Sarah creates account (Client)<br>
+                ➜ Searches for "Family Law" specialists<br>
+                ➜ Finds Lawyer John (5 years experience)<br>
+                ➜ Fills case details (Divorce case)<br>
+                ➜ Submits case request
+            </div>
+            
+            <div class="example">
+                <strong>TUESDAY - Lawyer Reviews</strong><br>
+                ➜ John gets notification<br>
+                ➜ Reviews Sarah's case details<br>
+                ➜ Approves the case<br>
+                ➜ Sets fee: $500
+            </div>
+            
+            <div class="example">
+                <strong>WEDNESDAY - Payment</strong><br>
+                ➜ Sarah sees approval notification<br>
+                ➜ Confirms case<br>
+                ➜ Makes $500 payment online ✅<br>
+                ➜ Payment successful
+            </div>
+            
+            <div class="example">
+                <strong>THURSDAY - Work Begins</strong><br>
+                ➜ Case Status: ACTIVE 🟢<br>
+                ➜ Both can see: Case is ACTIVE<br>
+                ➜ John: "Send me divorce documents"<br>
+                ➜ Sarah: "Here's my document"<br>
+                ➜ They start working together
+            </div>
+            
+            <div class="example">
+                <strong>FOLLOWING WEEKS - Progress</strong><br>
+                ➜ Lawyer provides updates<br>
+                ➜ Client can see case progress<br>
+                ➜ They communicate via chat<br>
+                ➜ Case moves forward
+            </div>
+            
+            <div class="example">
+                <strong>CASE COMPLETION</strong><br>
+                ➜ Case resolved ✅<br>
+                ➜ Final invoice generated<br>
+                ➜ Both can download receipts<br>
+                ➜ Lawyer updates income report
+            </div>
+        </div>
+        
+        <!-- SECTION 11 -->
+        <div class="section">
+            <h2>✨ Key Features Summary</h2>
+            
+            <table>
+                <tr>
+                    <th>Feature</th>
+                    <th>What It Does</th>
+                </tr>
+                <tr>
+                    <td><strong>Login/Registration</strong></td>
+                    <td>Secure access for lawyers & clients with different sign-up flows</td>
+                </tr>
+                <tr>
+                    <td><strong>Case Request</strong></td>
+                    <td>Clients submit legal matters with detailed descriptions</td>
+                </tr>
+                <tr>
+                    <td><strong>Case Approval</strong></td>
+                    <td>Lawyers review and approve suitable cases</td>
+                </tr>
+                <tr>
+                    <td><strong>Payment System</strong></td>
+                    <td>Clients pay lawyers securely online</td>
+                </tr>
+                <tr>
+                    <td><strong>Real-Time Chat</strong></td>
+                    <td>Direct messaging between lawyer & client</td>
+                </tr>
+                <tr>
+                    <td><strong>Invoice Tracking</strong></td>
+                    <td>Track all payments, fees, and generate reports</td>
+                </tr>
+                <tr>
+                    <td><strong>Dashboard</strong></td>
+                    <td>Overview of all activity and statistics</td>
+                </tr>
+                <tr>
+                    <td><strong>Notifications</strong></td>
+                    <td>Get alerts for new messages, cases, payments</td>
+                </tr>
+                <tr>
+                    <td><strong>Reports</strong></td>
+                    <td>Generate financial reports and invoices</td>
+                </tr>
+            </table>
+        </div>
+        
+        <div class="page-break"></div>
+        
+        <!-- SECTION 12 -->
+        <div class="section">
+            <h2>🔒 Security Features</h2>
+            
+            <div class="feature-list">
+                <div class="feature-item">
+                    ✅ <strong>Password Protection</strong><br>
+                    Encrypted passwords for safe login
+                </div>
+                <div class="feature-item">
+                    ✅ <strong>User Type Verification</strong><br>
+                    Lawyer can't act as client and vice versa
+                </div>
+                <div class="feature-item">
+                    ✅ <strong>Admin Approval</strong><br>
+                    Lawyers must be verified before acceptance
+                </div>
+                <div class="feature-item">
+                    ✅ <strong>Secure Payments</strong><br>
+                    Encrypted card processing (PCI compliant)
+                </div>
+                <div class="feature-item">
+                    ✅ <strong>Private Messages</strong><br>
+                    Only sender & receiver can view chats
+                </div>
+                <div class="feature-item">
+                    ✅ <strong>Data Protection</strong><br>
+                    All information securely stored in database
+                </div>
+            </div>
+        </div>
+        
+        <!-- SECTION 13 -->
+        <div class="section">
+            <h2>📱 Accessibility & Compatibility</h2>
+            
+            <p><strong>This system works on:</strong></p>
+            
+            <div class="feature-list">
+                <div class="feature-item">
+                    💻 <strong>Desktop/Laptop</strong><br>
+                    Full desktop experience
+                </div>
+                <div class="feature-item">
+                    📱 <strong>Smartphone</strong><br>
+                    Mobile-optimized interface
+                </div>
+                <div class="feature-item">
+                    📲 <strong>Tablet</strong><br>
+                    Responsive design
+                </div>
+                <div class="feature-item">
+                    🌐 <strong>Any Browser</strong><br>
+                    Chrome, Firefox, Safari, Edge
+                </div>
+            </div>
+            
+            <p style="margin-top: 20px; padding: 15px; background: #e8f5e9; border-radius: 5px; border-left: 3px solid #4caf50;">
+                <strong>Simply open in your web browser!</strong> No need to download or install anything.
+            </p>
+        </div>
+        
+        <!-- SECTION 14 -->
+        <div class="section">
+            <h2>🎓 Benefits Summary</h2>
+            
+            <div class="benefits">
+                <div class="benefit-box">
+                    <h4>For Lawyers ⚖️</h4>
+                    <ul>
+                        <li>Find clients easily</li>
+                        <li>Manage multiple cases</li>
+                        <li>Get paid online</li>
+                        <li>Track earnings</li>
+                        <li>Build reputation</li>
+                        <li>Organized workspace</li>
+                    </ul>
+                </div>
+                
+                <div class="benefit-box">
+                    <h4>For Clients 👤</h4>
+                    <ul>
+                        <li>Find qualified lawyers</li>
+                        <li>Clear case status</li>
+                        <li>Direct communication</li>
+                        <li>Safe payments</li>
+                        <li>Professional service</li>
+                        <li>Track expenses</li>
+                    </ul>
+                </div>
+                
+                <div class="benefit-box">
+                    <h4>For Society 🌍</h4>
+                    <ul>
+                        <li>Better legal access</li>
+                        <li>Less paperwork</li>
+                        <li>Transparent process</li>
+                        <li>Faster resolution</li>
+                        <li>Professional standards</li>
+                        <li>Equal opportunity</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        
+        <div class="page-break"></div>
+        
+        <!-- SECTION 15 -->
+        <div class="section">
+            <h2>❓ Frequently Asked Questions</h2>
+            
+            <div class="qa">
+                <strong>Q: How do I register?</strong><br>
+                A: Click "Register as Client" or "Register as Lawyer", fill in the required information, and submit. Clients get instant access. Lawyers wait for admin approval.
+            </div>
+            
+            <div class="qa">
+                <strong>Q: How long does lawyer approval take?</strong><br>
+                A: Usually 24-48 hours. The admin team reviews credentials and approves qualified lawyers.
+            </div>
+            
+            <div class="qa">
+                <strong>Q: Can I change lawyers after requesting a case?</strong><br>
+                A: Yes, you can cancel the current case request and submit a new one with a different lawyer.
+            </div>
+            
+            <div class="qa">
+                <strong>Q: Is payment safe and secure?</strong><br>
+                A: Yes! We use encrypted payment gateways that protect your card details. Your information is never stored unsecurely.
+            </div>
+            
+            <div class="qa">
+                <strong>Q: Can lawyers see my personal information?</strong><br>
+                A: Lawyers only see the information you provide for your case. Your personal details are kept private.
+            </div>
+            
+            <div class="qa">
+                <strong>Q: What if a lawyer doesn't respond?</strong><br>
+                A: Contact the admin team for mediation. We monitor cases and can intervene if needed.
+            </div>
+            
+            <div class="qa">
+                <strong>Q: Can I get a refund if I'm not satisfied?</strong><br>
+                A: Refund policies depend on the case status. Contact admin for dispute resolution.
+            </div>
+            
+            <div class="qa">
+                <strong>Q: How do I download invoices?</strong><br>
+                A: Go to your "Invoices" section and click "Download PDF" on any invoice.
+            </div>
+        </div>
+        
+        <!-- SECTION 16 -->
+        <div class="section">
+            <h2>🚀 Future Enhancements</h2>
+            
+            <div class="feature-list">
+                <div class="feature-item">
+                    📹 <strong>Video Consultation</strong><br>
+                    Face-to-face meetings with lawyers
+                </div>
+                <div class="feature-item">
+                    📄 <strong>Document Management</strong><br>
+                    Upload, store, share legal documents
+                </div>
+                <div class="feature-item">
+                    📅 <strong>Auto Scheduling</strong><br>
+                    Automated appointment booking
+                </div>
+                <div class="feature-item">
+                    ⭐ <strong>Ratings & Reviews</strong><br>
+                    Client feedback on lawyer performance
+                </div>
+                <div class="feature-item">
+                    🗺️ <strong>Location Finder</strong><br>
+                    Find lawyers near you
+                </div>
+                <div class="feature-item">
+                    📲 <strong>Mobile App</strong><br>
+                    Native iOS & Android applications
+                </div>
+                <div class="feature-item">
+                    🔔 <strong>SMS Alerts</strong><br>
+                    Text notifications for important updates
+                </div>
+                <div class="feature-item">
+                    💳 <strong>Multiple Payment Options</strong><br>
+                    Credit card, debit card, digital wallets
+                </div>
+            </div>
+        </div>
+        
+        <!-- SECTION 17 -->
+        <div class="section">
+            <h2>🎯 Getting Started</h2>
+            
+            <h3>Quick Start Guide:</h3>
+            
+            <div class="step">
+                <strong>Step 1:</strong> Go to the website<br>
+                <strong>Step 2:</strong> Click "Register" (Choose: Client or Lawyer)<br>
+                <strong>Step 3:</strong> Fill in your details<br>
+                <strong>Step 4:</strong> Submit registration<br>
+                <strong>Step 5:</strong> Check email for confirmation<br>
+                <strong>Step 6:</strong> Login with your credentials<br>
+                <strong>Step 7:</strong> Start using the platform!
+            </div>
+            
+            <h3 style="margin-top: 30px;">For Clients:</h3>
+            <div class="feature-list">
+                <div class="feature-item">
+                    1️⃣ Find a lawyer<br>
+                    2️⃣ Request case<br>
+                    3️⃣ Make payment<br>
+                    4️⃣ Start collaboration
+                </div>
+                <div class="feature-item">
+                    5️⃣ Track progress<br>
+                    6️⃣ Communicate<br>
+                    7️⃣ Complete case<br>
+                    8️⃣ Download receipt
+                </div>
+            </div>
+            
+            <h3 style="margin-top: 20px;">For Lawyers:</h3>
+            <div class="feature-list">
+                <div class="feature-item">
+                    1️⃣ Register profile<br>
+                    2️⃣ Wait approval<br>
+                    3️⃣ Review cases<br>
+                    4️⃣ Approve/Reject
+                </div>
+                <div class="feature-item">
+                    5️⃣ Get payment<br>
+                    6️⃣ Communicate<br>
+                    7️⃣ Complete work<br>
+                    8️⃣ View earnings
+                </div>
+            </div>
+        </div>
+        
+        <footer>
+            <p><strong>Legal Case Management System - Presentation Guide</strong></p>
+            <p>Complete workflow documentation for lawyers, clients, and administrators</p>
+            <p style="margin-top: 15px; color: #999; font-size: 0.9em;">Generated for demonstration and training purposes</p>
+            <p style="margin-top: 30px; color: #667eea; font-weight: bold;">Ready to Get Started? 🚀</p>
+        </footer>
+    </div>
+</body>
+</html>
